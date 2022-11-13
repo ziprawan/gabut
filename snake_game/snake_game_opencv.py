@@ -1,5 +1,6 @@
-import cv2, os
+import cv2
 from cvzone.HandTrackingModule import HandDetector
+
 try:
     from game_class import SnakeGameClass
 except:
@@ -39,6 +40,6 @@ while True:
     # Press 'q' to exit, and 'r' to restart if you lose the game
 
     if key == ord('r'):
-        game.game_over = False
+        game.gameOver = False
     elif key == ord('q'):
         break

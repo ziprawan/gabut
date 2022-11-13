@@ -3,3 +3,4 @@ setuptools
 wheel
 cvzone
 numpy
+mediapipe
