@@ -77,6 +77,7 @@ class SnakeGameClass:
             if -1 <= minDist <= 1:
                 print("Hit")
                 self.gameOver = True
+                self.score = 0
                 self.points = []  # all points of the snake
                 self.lengths = []  # distance between each point
                 self.currentLength = 0  # total length of the snake
