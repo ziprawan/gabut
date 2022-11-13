@@ -41,5 +41,6 @@ while True:
 
     if key == ord('r'):
         game.gameOver = False
+        game.isNewGame = True
     elif key == ord('q'):
         break

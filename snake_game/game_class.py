@@ -15,6 +15,7 @@ class SnakeGameClass:
 
         self.score = 0
         self.gameOver = False
+        self.isNewGame = False
 
     def randomFoodLocation(self):
         self.foodPoint = random.randint(100, 1000), random.randint(100, 600)
@@ -27,6 +28,9 @@ class SnakeGameClass:
             cvzone.putTextRect(imgMain, f'Your Score: {self.score}', [300, 550],
                                scale=7, thickness=5, offset=20)
         else:
+            if self.isNewGame:
+                self.score = 0
+                self.isNewGame = False
             px, py = self.previousHead
             cx, cy = currentHead
 
@@ -77,7 +81,6 @@ class SnakeGameClass:
             if -1 <= minDist <= 1:
                 print("Hit")
                 self.gameOver = True
-                self.score = 0
                 self.points = []  # all points of the snake
                 self.lengths = []  # distance between each point
                 self.currentLength = 0  # total length of the snake
